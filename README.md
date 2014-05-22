@@ -38,7 +38,7 @@ var preprocess = require('gulp-preprocess');
 
 gulp.task('html', function() {
   gulp.src('./app/*.html')
-    .pipe(preprocess())
+    .pipe(preprocess({context: { NODE_ENV: 'production', DEBUG: true}})) //To set environment variables in-line
     .pipe(gulp.dest('./dist/'))
 });
 
@@ -85,7 +85,7 @@ CoffeeScript files are also supported.
 
 #### More Examples
 
-`grunt-preprocess` uses [preprocess](https://github.com/jsoverson/preprocess#directive-syntax). More examples can be found in its [README](https://github.com/jsoverson/preprocess#directive-syntax).
+`gulp-preprocess` uses [preprocess](https://github.com/jsoverson/preprocess#directive-syntax). More examples can be found in its [README](https://github.com/jsoverson/preprocess#directive-syntax).
 
 
 ## API
