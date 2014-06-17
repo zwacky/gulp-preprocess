@@ -98,7 +98,7 @@ Default: `{}`
 
 Context for directives used in your preprocessed files. The default context consists of the current user environment variables. Custom context is merged with `process.env`.
 
-#### options.base
+#### options.includeBase
 Type: `String`
 
 Base directory for included files. By default, the path to included files is relative to the file currently being processed.
