@@ -1,5 +1,4 @@
 var _     = require('lodash');
-var gutil = require('gulp-util');
 var map   = require('map-stream');
 var pp    = require('preprocess');
 var path  = require('path');
@@ -16,7 +15,7 @@ module.exports = function (options) {
     if (file.isStream()) return callback(new Error("gulp-preprocess: Streaming not supported"));
 
     context.src = file.path;
-    context.srcDir = path.dirname(file.path);
+    context.srcDir = context.base || path.dirname(file.path);
     context.NODE_ENV = context.NODE_ENV || 'development';
 
     contents = file.contents.toString('utf8');
