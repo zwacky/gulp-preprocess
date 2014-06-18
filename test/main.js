@@ -79,6 +79,21 @@ describe('gulp-preprocess', function(){
 
     });
 
+    it('should preprocess without options object', function(done){
+      var stream = preprocess();
+
+      var fakeFile = fixtureFile('test.coffee');
+
+      stream.once('data', function(newFile){
+        should.exist(newFile);
+        should.exist(newFile.contents);
+        String(newFile.contents).should.equal(fs.readFileSync('test/expected/test.coffee', 'utf8'));
+        done();
+      });
+      stream.write(fakeFile);
+
+    });
+
     it('should preprocess html with custom base', function(done){
       var stream = preprocess({
         includeBase: 'test/fixtures/base',
