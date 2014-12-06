@@ -11,7 +11,7 @@
 </tr>
 <tr>
 <td>Node Version</td>
-<td>>= 0.9.0</td>
+<td>>= 0.10.0</td>
 </tr>
 <tr>
 <td>Gulp Version</td>
