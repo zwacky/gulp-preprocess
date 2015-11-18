@@ -1,7 +1,7 @@
 {
   "name": "gulp-preprocess",
   "description": "Gulp plugin to preprocess HTML, JavaScript, and other files based on custom context or environment configuration",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "homepage": "http://github.com/jas/gulp-preprocess",
   "repository": {
     "type": "git",
@@ -12,10 +12,10 @@
   "dependencies": {
     "lodash": "2.4.x",
     "map-stream": "0.1.x",
-    "preprocess": "2.1.x"
+    "preprocess": "3.0.x"
   },
   "devDependencies": {
-    "gulp-util": "2.2.x",
+    "gulp-util": "3.0.x",
     "mocha": "*",
     "should": "*"
   },
